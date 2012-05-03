@@ -17,3 +17,9 @@ exports.md5 = function(req,res) {
 exports.ejs = function  (req,res) {
 	res.render('hello',{title: "hello ejs"});
 };
+
+exports.api_post = function (req,res) {
+	console.log('api called');
+	console.log(req.params);
+	res.render('api', {layout: false});
+}
